@@ -62,7 +62,9 @@ npm install @google-cloud/contact-center-insights
 
 // remove this line after package is released
 // eslint-disable-next-line node/no-missing-require
-const {ContactCenterInsightsClient} = require('@google-cloud/contact-center-insights');
+const {
+  ContactCenterInsightsClient,
+} = require('@google-cloud/contact-center-insights');
 
 // TODO(developer): replace with your prefered project ID.
 // const projectId = 'my-project'
@@ -73,10 +75,12 @@ const client = new {ContactCenterInsightsClient}();
 
 //TODO(library generator): write the actual function you will be testing
 async function doSomething() {
- console.log('DPE! Change this code so that it shows how to use the library! See comments below on structure.')
- // const [thing] = await client.methodName({
- // });
- // console.info(thing);
+  console.log(
+    'DPE! Change this code so that it shows how to use the library! See comments below on structure.'
+  );
+  // const [thing] = await client.methodName({
+  // });
+  // console.info(thing);
 }
 doSomething();
 
