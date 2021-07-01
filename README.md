@@ -69,20 +69,16 @@ const {
 // TODO(developer): replace with your prefered project ID.
 // const projectId = 'my-project'
 
-// Creates a client
-// eslint-disable-next-line no-unused-vars
-const client = new {ContactCenterInsightsClient}();
+const client = new ContactCenterInsightsClient();
 
 //TODO(library generator): write the actual function you will be testing
-async function doSomething() {
-  console.log(
-    'DPE! Change this code so that it shows how to use the library! See comments below on structure.'
-  );
-  // const [thing] = await client.methodName({
-  // });
-  // console.info(thing);
+async function listConversations() {
+  const conversations = await client.listConversations({
+    parent: `projects/${projectId}/locations/${location}`,
+  });
+  console.info(conversations);
 }
-doSomething();
+listConversations();
 
 ```
 
