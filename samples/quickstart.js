@@ -13,7 +13,7 @@
 
 'use strict';
 
-async function main(projectId) {
+async function main(projectId, location) {
   // [START nodejs_contact_center_insights_quickstart]
   // Imports the Google Cloud client library
 
@@ -30,7 +30,9 @@ async function main(projectId) {
 
   //TODO(library generator): write the actual function you will be testing
   async function listConversations() {
-    const conversations = await client.listConversations({parent: projectId});
+    const conversations = await client.listConversations({
+      parent: `projects/${projectId}/locations/${location}`,
+    });
     console.info(conversations);
   }
   listConversations();
