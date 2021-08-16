@@ -20,7 +20,9 @@ const {before, describe, it} = require('mocha');
 const cp = require('child_process');
 const execSync = cmd => cp.execSync(cmd, {encoding: 'utf-8'});
 
-const {ContactCenterInsightsClient} = require('@google-cloud/contact-center-insights');
+const {
+  ContactCenterInsightsClient,
+} = require('@google-cloud/contact-center-insights');
 const client = new ContactCenterInsightsClient();
 const bigqueryProjectId = process.env.BIGQUERY_PROJECT_ID;
 const bigqueryDataset = process.env.BIGQUERY_DATASET;

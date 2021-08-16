@@ -20,7 +20,9 @@ const {before, describe, it} = require('mocha');
 const cp = require('child_process');
 const execSync = cmd => cp.execSync(cmd, {encoding: 'utf-8'});
 
-const {ContactCenterInsightsClient} = require('@google-cloud/contact-center-insights');
+const {
+  ContactCenterInsightsClient,
+} = require('@google-cloud/contact-center-insights');
 const client = new ContactCenterInsightsClient();
 const transcriptUri = 'gs://cloud-samples-data/ccai/chat_sample.json';
 const audioUri = 'gs://cloud-samples-data/ccai/voice_6912.txt';
@@ -33,22 +35,46 @@ describe('CreateAnalysis', () => {
   });
 
   it('should create a conversation and an analysis then delete both', async () => {
-    const stdoutCreateConversation = execSync(`node ./createConversation.js ${projectId} ${transcriptUri} ${audioUri}`);
+    const stdoutCreateConversation = execSync(
+      `node ./createConversation.js ${projectId} ${transcriptUri} ${audioUri}`
+    );
     const conversationName = stdoutCreateConversation.slice(8);
-    assert.match(stdoutCreateConversation,
-                 new RegExp('Created projects/[0-9]+/locations/us-central1/conversations/[0-9]+'));
+    assert.match(
+      stdoutCreateConversation,
+      new RegExp(
+        'Created projects/[0-9]+/locations/us-central1/conversations/[0-9]+'
+      )
+    );
 
-    const stdoutCreateAnalysis = execSync(`node ./createAnalysis.js ${conversationName}`);
+    const stdoutCreateAnalysis = execSync(
+      `node ./createAnalysis.js ${conversationName}`
+    );
     const analysisName = stdoutCreateAnalysis.slice(8);
-    assert.match(stdoutCreateAnalysis,
-                 new RegExp('Created projects/[0-9]+/locations/us-central1/conversations/[0-9]+/analyses/[0-9]+'));
+    assert.match(
+      stdoutCreateAnalysis,
+      new RegExp(
+        'Created projects/[0-9]+/locations/us-central1/conversations/[0-9]+/analyses/[0-9]+'
+      )
+    );
 
-    const stdoutDeleteAnalysis = execSync(`node ./deleteAnalysis.js ${analysisName}`);
-    assert.match(stdoutDeleteAnalysis,
-                 new RegExp('Deleted projects/[0-9]+/locations/us-central1/conversations/[0-9]+/analyses/[0-9]+'));
+    const stdoutDeleteAnalysis = execSync(
+      `node ./deleteAnalysis.js ${analysisName}`
+    );
+    assert.match(
+      stdoutDeleteAnalysis,
+      new RegExp(
+        'Deleted projects/[0-9]+/locations/us-central1/conversations/[0-9]+/analyses/[0-9]+'
+      )
+    );
 
-    const stdoutDeleteConversation = execSync(`node ./deleteConversation.js ${conversationName}`);
-    assert.match(stdoutDeleteConversation,
-                 new RegExp('Deleted projects/[0-9]+/locations/us-central1/conversations/[0-9]+'));
+    const stdoutDeleteConversation = execSync(
+      `node ./deleteConversation.js ${conversationName}`
+    );
+    assert.match(
+      stdoutDeleteConversation,
+      new RegExp(
+        'Deleted projects/[0-9]+/locations/us-central1/conversations/[0-9]+'
+      )
+    );
   });
 });

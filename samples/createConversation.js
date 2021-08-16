@@ -18,8 +18,8 @@
 function main(projectId, transcriptUri, audioUri) {
   // [START contactcenterinsights_create_conversation]
   /**
-    * TODO(developer): Uncomment these variables before running the sample.
-    */
+   * TODO(developer): Uncomment these variables before running the sample.
+   */
   // const projectId = 'my_project_id';
   // const transcriptUri = 'gs://cloud-samples-data/ccai/chat_sample.json';
   // const audioUri = 'gs://cloud-samples-data/ccai/voice_6912.txt';

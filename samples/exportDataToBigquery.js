@@ -18,8 +18,8 @@
 function main(projectId, bigqueryProjectId, bigqueryDataset, bigqueryTable) {
   // [START contactcenterinsights_export_data_to_bigquery]
   /**
-    * TODO(developer): Uncomment these variables before running the sample.
-    */
+   * TODO(developer): Uncomment these variables before running the sample.
+   */
   // const projectId = 'my_project_id';
   // const bigqueryProjectId = 'my_bigquery_project_id';
   // const bigqueryDataset = 'my_bigquery_dataset';
@@ -47,7 +47,10 @@ function main(projectId, bigqueryProjectId, bigqueryDataset, bigqueryTable) {
     try {
       await operation.promise();
     } catch (e) {
-      if (e.message == 'Long running operation has finished but there was no result') {
+      if (
+        e.message ===
+        'Long running operation has finished but there was no result'
+      ) {
         // Ignore because the export operation doesn't return a response when it completes.
       } else {
         throw e;
