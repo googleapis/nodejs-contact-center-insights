@@ -33,6 +33,73 @@ Before running the samples, make sure you've followed the steps outlined in
 
 
 
+### Create Analysis
+
+View the [source code](https://github.com/googleapis/nodejs-contact-center-insights/blob/main/samples/createAnalysis.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/nodejs-contact-center-insights&page=editor&open_in_editor=samples/createAnalysis.js,samples/README.md)
+
+__Usage:__
+
+
+`node samples/createAnalysis.js`
+
+
+-----
+
+
+
+
+### Create Conversation
+
+View the [source code](https://github.com/googleapis/nodejs-contact-center-insights/blob/main/samples/createConversation.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/nodejs-contact-center-insights&page=editor&open_in_editor=samples/createConversation.js,samples/README.md)
+
+__Usage:__
+
+
+`node samples/createConversation.js`
+
+
+-----
+
+
+
+
+### Create Conversation With Ttl
+
+View the [source code](https://github.com/googleapis/nodejs-contact-center-insights/blob/main/samples/createConversationWithTtl.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/nodejs-contact-center-insights&page=editor&open_in_editor=samples/createConversationWithTtl.js,samples/README.md)
+
+__Usage:__
+
+
+`node samples/createConversationWithTtl.js`
+
+
+-----
+
+
+
+### Export Data To Bigquery
+
+View the [source code](https://github.com/googleapis/nodejs-contact-center-insights/blob/main/samples/exportDataToBigquery.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/nodejs-contact-center-insights&page=editor&open_in_editor=samples/exportDataToBigquery.js,samples/README.md)
+
+__Usage:__
+
+
+`node samples/exportDataToBigquery.js`
+
+
+-----
+
+
+
+
 ### Quickstart
 
 View the [source code](https://github.com/googleapis/nodejs-contact-center-insights/blob/main/samples/quickstart.js).
