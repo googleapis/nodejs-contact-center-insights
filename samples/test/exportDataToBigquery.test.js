@@ -18,24 +18,48 @@
 const {assert} = require('chai');
 const {before, describe, it} = require('mocha');
 const cp = require('child_process');
+const uuid = require('uuid');
 const execSync = cmd => cp.execSync(cmd, {encoding: 'utf-8'});
+
+const GCLOUD_TESTS_PREFIX = 'nodejs_samples_tests';
+const generateUuid = () =>
+  `${GCLOUD_TESTS_PREFIX}_${uuid.v4()}`.replace(/-/gi, '_');
 
 const {
   ContactCenterInsightsClient,
 } = require('@google-cloud/contact-center-insights');
 const client = new ContactCenterInsightsClient();
 
-describe('ExportInsightsData', () => {
+const {
+  BigQuery,
+} = require('@google-cloud/bigquery');
+const bigquery = new BigQuery();
+
+const bigqueryDataset = generateUuid();
+const bigqueryTable = generateUuid();
+
+describe.only('ExportInsightsData', () => {
   let projectId;
   let bigqueryProjectId;
-  let bigqueryDataset;
-  let bigqueryTable;
 
   before(async () => {
     projectId = await client.getProjectId();
     bigqueryProjectId = await client.getProjectId();
-    bigqueryDataset = 'my_bigquery_dataset';
-    bigqueryTable = 'my_bigquery_table';
+
+    // Creates a BigQuery dataset and table.
+    const bigqueryOptions = {
+      location: 'US',
+    };
+    await bigquery.createDataset(bigqueryDataset, bigqueryOptions);
+    await bigquery.dataset(bigqueryDataset).createTable(bigqueryTable, bigqueryOptions);
+  });
+
+  after(async () => {
+    // Deletes the BigQuery dataset and table.
+    await bigquery
+      .dataset(bigqueryDataset)
+      .delete({force: true})
+      .catch(console.warn);
   });
 
   it('should export data to BigQuery', async () => {
