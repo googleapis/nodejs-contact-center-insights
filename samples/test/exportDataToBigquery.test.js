@@ -24,15 +24,18 @@ const {
   ContactCenterInsightsClient,
 } = require('@google-cloud/contact-center-insights');
 const client = new ContactCenterInsightsClient();
-const bigqueryProjectId = process.env.BIGQUERY_PROJECT_ID;
-const bigqueryDataset = process.env.BIGQUERY_DATASET;
-const bigqueryTable = process.env.BIGQUERY_TABLE;
 
 describe('ExportInsightsData', () => {
   let projectId;
+  let bigqueryProjectId;
+  let bigqueryDataset;
+  let bigqueryTable;
 
   before(async () => {
     projectId = await client.getProjectId();
+    bigqueryProjectId = await client.getProjectId();
+    bigqueryDataset = 'my_bigquery_dataset';
+    bigqueryTable = 'my_bigquery_table';
   });
 
   it('should export data to BigQuery', async () => {
