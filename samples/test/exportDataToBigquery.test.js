@@ -16,7 +16,7 @@
 'use strict';
 
 const {assert} = require('chai');
-const {before, describe, it} = require('mocha');
+const {after, before, describe, it} = require('mocha');
 const cp = require('child_process');
 const uuid = require('uuid');
 const execSync = cmd => cp.execSync(cmd, {encoding: 'utf-8'});
@@ -30,15 +30,13 @@ const {
 } = require('@google-cloud/contact-center-insights');
 const client = new ContactCenterInsightsClient();
 
-const {
-  BigQuery,
-} = require('@google-cloud/bigquery');
+const {BigQuery} = require('@google-cloud/bigquery');
 const bigquery = new BigQuery();
 
 const bigqueryDataset = generateUuid();
 const bigqueryTable = generateUuid();
 
-describe.only('ExportInsightsData', () => {
+describe('ExportInsightsData', () => {
   let projectId;
   let bigqueryProjectId;
 
@@ -51,7 +49,9 @@ describe.only('ExportInsightsData', () => {
       location: 'US',
     };
     await bigquery.createDataset(bigqueryDataset, bigqueryOptions);
-    await bigquery.dataset(bigqueryDataset).createTable(bigqueryTable, bigqueryOptions);
+    await bigquery
+      .dataset(bigqueryDataset)
+      .createTable(bigqueryTable, bigqueryOptions);
   });
 
   after(async () => {
