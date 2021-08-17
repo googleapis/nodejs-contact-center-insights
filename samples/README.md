@@ -12,6 +12,10 @@
 
 * [Before you begin](#before-you-begin)
 * [Samples](#samples)
+  * [Create Analysis](#create-analysis)
+  * [Create Conversation](#create-conversation)
+  * [Create Conversation with TTL](#create-conversation-with-ttl)
+  * [Export Data to BigQuery](#export-data-to-bigquery)
   * [Quickstart](#quickstart)
 
 ## Before you begin
@@ -40,8 +44,64 @@ __Usage:__
 
 `node samples/quickstart.js`
 
+-----
 
 
+
+### Create Analysis
+
+View the [source code](https://github.com/googleapis/nodejs-contact-center-insights/blob/main/samples/createAnalysis.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/nodejs-contact-center-insights&page=editor&open_in_editor=samples/createAnalysis.js,samples/README.md)
+
+__Usage:__
+
+
+`node samples/createAnalysis.js <CONVERSATION_NAME>`
+
+-----
+
+
+
+# Create Conversation
+View the [source code](https://github.com/googleapis/nodejs-contact-center-insights/blob/main/samples/createConversation.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/nodejs-contact-center-insights&page=editor&open_in_editor=samples/createConversation.js,samples/README.md)
+
+__Usage:__
+
+
+`node samples/createConversation.js <PROJECT_ID>`
+
+-----
+
+
+
+# Create Conversation with TTL
+View the [source code](https://github.com/googleapis/nodejs-contact-center-insights/blob/main/samples/createConversationWithTtl.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/nodejs-contact-center-insights&page=editor&open_in_editor=samples/createConversationWithTtl.js,samples/README.md)
+
+__Usage:__
+
+
+`node samples/createConversationWithTtl.js <PROJECT_ID>`
+
+-----
+
+
+
+# Export Data to BigQuery
+View the [source code](https://github.com/googleapis/nodejs-contact-center-insights/blob/main/samples/exportDataToBigquery.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/nodejs-contact-center-insights&page=editor&open_in_editor=samples/exportDataToBigquery.js,samples/README.md)
+
+__Usage:__
+
+
+`node samples/exportDataToBigquery.js <PROJECT_ID> <BIGQUERY_PROJECT_ID> <BIGQUERY_DATASET> <BIGQUERY_TABLE>`
+
+-----
 
 
 

@@ -88,8 +88,11 @@ Samples are in the [`samples/`](https://github.com/googleapis/nodejs-contact-cen
 
 | Sample                      | Source Code                       | Try it |
 | --------------------------- | --------------------------------- | ------ |
+| Create Analysis | [source code](https://github.com/googleapis/nodejs-contact-center-insights/blob/main/samples/createAnalysis.js) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/nodejs-contact-center-insights&page=editor&open_in_editor=samples/createAnalysis.js,samples/README.md) |
+| Create Conversation | [source code](https://github.com/googleapis/nodejs-contact-center-insights/blob/main/samples/createConversation.js) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/nodejs-contact-center-insights&page=editor&open_in_editor=samples/createConversation.js,samples/README.md) |
+| Create Conversation with TTL | [source code](https://github.com/googleapis/nodejs-contact-center-insights/blob/main/samples/createConversationWithTtl.js) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/nodejs-contact-center-insights&page=editor&open_in_editor=samples/createConversationWithTtl.js,samples/README.md) |
+| Export Data to BigQuery | [source code](https://github.com/googleapis/nodejs-contact-center-insights/blob/main/samples/exportDataToBigQuery.js) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/nodejs-contact-center-insights&page=editor&open_in_editor=samples/exportDataToBigquery.js,samples/README.md) |
 | Quickstart | [source code](https://github.com/googleapis/nodejs-contact-center-insights/blob/main/samples/quickstart.js) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/nodejs-contact-center-insights&page=editor&open_in_editor=samples/quickstart.js,samples/README.md) |
-
 
 
 The [Contact Center AI Insights API Node.js Client API Reference][client-docs] documentation

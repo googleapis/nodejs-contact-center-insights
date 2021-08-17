@@ -16,7 +16,7 @@
 'use strict';
 
 const {assert} = require('chai');
-const {before, describe, it} = require('mocha');
+const {afterEach, before, describe, it} = require('mocha');
 const cp = require('child_process');
 const execSync = cmd => cp.execSync(cmd, {encoding: 'utf-8'});
 
@@ -24,35 +24,28 @@ const {
   ContactCenterInsightsClient,
 } = require('@google-cloud/contact-center-insights');
 const client = new ContactCenterInsightsClient();
-const transcriptUri = 'gs://cloud-samples-data/ccai/chat_sample.json';
-const audioUri = 'gs://cloud-samples-data/ccai/voice_6912.txt';
 
 describe('CreateConversation', () => {
   let projectId;
+  let conversationName;
 
   before(async () => {
     projectId = await client.getProjectId();
   });
 
-  it('should create a conversation then delete it', async () => {
-    const stdoutCreate = execSync(
-      `node ./createConversation.js ${projectId} ${transcriptUri} ${audioUri}`
-    );
-    const conversationName = stdoutCreate.slice(8);
+  afterEach(() => {
+    client.deleteConversation({
+      name: conversationName,
+    });
+  });
+
+  it('should create a conversation', async () => {
+    const stdout = execSync(`node ./createConversation.js ${projectId}`);
+    conversationName = stdout.slice(8);
     assert.match(
-      stdoutCreate,
+      stdout,
       new RegExp(
         'Created projects/[0-9]+/locations/us-central1/conversations/[0-9]+'
-      )
-    );
-
-    const stdoutDelete = execSync(
-      `node ./deleteConversation.js ${conversationName}`
-    );
-    assert.match(
-      stdoutDelete,
-      new RegExp(
-        'Deleted projects/[0-9]+/locations/us-central1/conversations/[0-9]+'
       )
     );
   });

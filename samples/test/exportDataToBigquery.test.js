@@ -17,8 +17,8 @@
 
 const {assert} = require('chai');
 const {after, before, describe, it} = require('mocha');
-const cp = require('child_process');
 const uuid = require('uuid');
+const cp = require('child_process');
 const execSync = cmd => cp.execSync(cmd, {encoding: 'utf-8'});
 
 const GCLOUD_TESTS_PREFIX = 'nodejs_samples_tests';

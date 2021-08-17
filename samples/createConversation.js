@@ -15,7 +15,11 @@
 
 'use strict';
 
-function main(projectId, transcriptUri, audioUri) {
+function main(
+  projectId,
+  transcriptUri = 'gs://cloud-samples-data/ccai/chat_sample.json',
+  audioUri = 'gs://cloud-samples-data/ccai/voice_6912.txt'
+) {
   // [START contactcenterinsights_create_conversation]
   /**
    * TODO(developer): Uncomment these variables before running the sample.
