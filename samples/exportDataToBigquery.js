@@ -44,18 +44,7 @@ function main(projectId, bigqueryProjectId, bigqueryDataset, bigqueryTable) {
     });
 
     // Wait for operation to complete.
-    try {
-      await operation.promise();
-    } catch (e) {
-      if (
-        e.message ===
-        'Long running operation has finished but there was no result'
-      ) {
-        // Ignore because the export operation doesn't return a response when it completes.
-      } else {
-        throw e;
-      }
-    }
+    await operation.promise();
     console.info('Exported data to BigQuery');
   }
   exportDataToBigquery();
