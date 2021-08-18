@@ -16,7 +16,7 @@
 'use strict';
 
 const {assert} = require('chai');
-const {afterEach, before, describe, it} = require('mocha');
+const {after, before, describe, it} = require('mocha');
 const cp = require('child_process');
 const execSync = cmd => cp.execSync(cmd, {encoding: 'utf-8'});
 
@@ -33,8 +33,8 @@ describe('CreateAnalysis', () => {
     projectId = await client.getProjectId();
   });
 
-  afterEach(() => {
-    client.deleteConversation({
+  after(async () => {
+    await client.deleteConversation({
       name: conversationName,
       force: true,
     });

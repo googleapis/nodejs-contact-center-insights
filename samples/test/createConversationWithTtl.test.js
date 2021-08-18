@@ -16,7 +16,7 @@
 'use strict';
 
 const {assert} = require('chai');
-const {afterEach, before, describe, it} = require('mocha');
+const {after, before, describe, it} = require('mocha');
 const cp = require('child_process');
 const execSync = cmd => cp.execSync(cmd, {encoding: 'utf-8'});
 
@@ -33,7 +33,7 @@ describe('CreateConversationWithTtl', () => {
     projectId = await client.getProjectId();
   });
 
-  afterEach(() => {
+  after(() => {
     client.deleteConversation({
       name: conversationName,
     });
