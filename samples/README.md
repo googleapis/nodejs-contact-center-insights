@@ -12,6 +12,7 @@
 
 * [Before you begin](#before-you-begin)
 * [Samples](#samples)
+  * [Create Issue Model](#create-issue-model)
   * [Quickstart](#quickstart)
 
 ## Before you begin
@@ -26,6 +27,23 @@ Before running the samples, make sure you've followed the steps outlined in
 `cd ..`
 
 ## Samples
+
+
+
+### Create Issue Model
+
+View the [source code](https://github.com/googleapis/nodejs-contact-center-insights/blob/main/samples/createIssueModel.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/nodejs-contact-center-insights&page=editor&open_in_editor=samples/createIssueModel.js,samples/README.md)
+
+__Usage:__
+
+
+`node samples/createIssueModel.js`
+
+
+-----
+
 
 
 
