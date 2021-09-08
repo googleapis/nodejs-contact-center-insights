@@ -33,7 +33,7 @@ function main(projectId, bigqueryProjectId, bigqueryDataset, bigqueryTable) {
   // Instantiates a client.
   const client = new ContactCenterInsightsClient();
 
-  async function exportDataToBigquery() {
+  async function exportToBigquery() {
     const [operation] = await client.exportInsightsData({
       parent: client.locationPath(projectId, 'us-central1'),
       bigQueryDestination: {
@@ -48,7 +48,7 @@ function main(projectId, bigqueryProjectId, bigqueryDataset, bigqueryTable) {
     await operation.promise();
     console.info('Exported data to BigQuery');
   }
-  exportDataToBigquery();
+  exportToBigquery();
   // [END contactcenterinsights_export_to_bigquery]
 }
 
