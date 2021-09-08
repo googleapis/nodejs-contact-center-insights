@@ -35,7 +35,7 @@ function main(conversationName) {
       parent: conversationName,
     });
 
-    // Wait for operation to complete.
+    // Wait for the operation to complete.
     const [analysis] = await operation.promise();
     console.info(`Created ${analysis.name}`);
   }

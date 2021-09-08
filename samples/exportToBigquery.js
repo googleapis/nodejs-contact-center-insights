@@ -44,7 +44,7 @@ function main(projectId, bigqueryProjectId, bigqueryDataset, bigqueryTable) {
       filter: 'agent_id="007"',
     });
 
-    // Wait for operation to complete.
+    // Wait for the operation to complete.
     await operation.promise();
     console.info('Exported data to BigQuery');
   }
