@@ -88,6 +88,7 @@ Samples are in the [`samples/`](https://github.com/googleapis/nodejs-contact-cen
 
 | Sample                      | Source Code                       | Try it |
 | --------------------------- | --------------------------------- | ------ |
+| Enable Pub Sub Notifications | [source code](https://github.com/googleapis/nodejs-contact-center-insights/blob/main/samples/enablePubSubNotifications.js) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/nodejs-contact-center-insights&page=editor&open_in_editor=samples/enablePubSubNotifications.js,samples/README.md) |
 | Quickstart | [source code](https://github.com/googleapis/nodejs-contact-center-insights/blob/main/samples/quickstart.js) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/nodejs-contact-center-insights&page=editor&open_in_editor=samples/quickstart.js,samples/README.md) |
 
 
