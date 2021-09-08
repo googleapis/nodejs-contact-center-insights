@@ -134,6 +134,12 @@ export class ContactCenterInsightsClient {
     // Save the auth object to the client, for use by other methods.
     this.auth = this._gaxGrpc.auth as gax.GoogleAuth;
 
+    // Set useJWTAccessWithScope on the auth object.
+    this.auth.useJWTAccessWithScope = true;
+
+    // Set defaultServicePath on the auth object.
+    this.auth.defaultServicePath = staticMembers.servicePath;
+
     // Set the default scopes in auth client if needed.
     if (servicePath === staticMembers.servicePath) {
       this.auth.defaultScopes = staticMembers.scopes;
@@ -2264,7 +2270,7 @@ export class ContactCenterInsightsClient {
    * @param {Object} request
    *   The request object that will be sent.
    * @param {google.cloud.contactcenterinsights.v1.Settings} request.settings
-   *   Required. The new values for the conversation.
+   *   Required. The new settings values.
    * @param {google.protobuf.FieldMask} request.updateMask
    *   Required. The list of fields to be updated.
    * @param {object} [options]
@@ -3225,10 +3231,10 @@ export class ContactCenterInsightsClient {
    * @param {string} request.parent
    *   Required. The parent resource of the conversation.
    * @param {number} request.pageSize
-   *   The maximum number of conversations to return in the response. If this
-   *   value is zero, the service will select a default size. A call might return
-   *   fewer objects than requested. A non-empty `next_page_token` in the response
-   *   indicates that more data is available.
+   *   The maximum number of conversations to return in the response. A valid page
+   *   size ranges from 0 to 1,000 inclusive. If the page size is zero or
+   *   unspecified, a default page size of 100 will be chosen. Note that a call
+   *   might return fewer results than the requested page size.
    * @param {string} request.pageToken
    *   The value returned by the last `ListConversationsResponse`. This value
    *   indicates that this is a continuation of a prior `ListConversations` call
@@ -3302,10 +3308,10 @@ export class ContactCenterInsightsClient {
    * @param {string} request.parent
    *   Required. The parent resource of the conversation.
    * @param {number} request.pageSize
-   *   The maximum number of conversations to return in the response. If this
-   *   value is zero, the service will select a default size. A call might return
-   *   fewer objects than requested. A non-empty `next_page_token` in the response
-   *   indicates that more data is available.
+   *   The maximum number of conversations to return in the response. A valid page
+   *   size ranges from 0 to 1,000 inclusive. If the page size is zero or
+   *   unspecified, a default page size of 100 will be chosen. Note that a call
+   *   might return fewer results than the requested page size.
    * @param {string} request.pageToken
    *   The value returned by the last `ListConversationsResponse`. This value
    *   indicates that this is a continuation of a prior `ListConversations` call
@@ -3357,10 +3363,10 @@ export class ContactCenterInsightsClient {
    * @param {string} request.parent
    *   Required. The parent resource of the conversation.
    * @param {number} request.pageSize
-   *   The maximum number of conversations to return in the response. If this
-   *   value is zero, the service will select a default size. A call might return
-   *   fewer objects than requested. A non-empty `next_page_token` in the response
-   *   indicates that more data is available.
+   *   The maximum number of conversations to return in the response. A valid page
+   *   size ranges from 0 to 1,000 inclusive. If the page size is zero or
+   *   unspecified, a default page size of 100 will be chosen. Note that a call
+   *   might return fewer results than the requested page size.
    * @param {string} request.pageToken
    *   The value returned by the last `ListConversationsResponse`. This value
    *   indicates that this is a continuation of a prior `ListConversations` call
@@ -4216,6 +4222,7 @@ export class ContactCenterInsightsClient {
       return this.contactCenterInsightsStub!.then(stub => {
         this._terminated = true;
         stub.close();
+        this.operationsClient.close();
       });
     }
     return Promise.resolve();
