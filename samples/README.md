@@ -15,7 +15,7 @@
   * [Create Analysis](#create-analysis)
   * [Create Conversation](#create-conversation)
   * [Create Conversation With Ttl](#create-conversation-with-ttl)
-  * [Export Data To Bigquery](#export-data-to-bigquery)
+  * [Export To Bigquery](#export-to-bigquery)
   * [Quickstart](#quickstart)
 
 ## Before you begin
@@ -84,16 +84,16 @@ __Usage:__
 
 
 
-### Export Data To Bigquery
+### Export To Bigquery
 
-View the [source code](https://github.com/googleapis/nodejs-contact-center-insights/blob/main/samples/exportDataToBigquery.js).
+View the [source code](https://github.com/googleapis/nodejs-contact-center-insights/blob/main/samples/exportToBigquery.js).
 
-[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/nodejs-contact-center-insights&page=editor&open_in_editor=samples/exportDataToBigquery.js,samples/README.md)
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/nodejs-contact-center-insights&page=editor&open_in_editor=samples/exportToBigquery.js,samples/README.md)
 
 __Usage:__
 
 
-`node samples/exportDataToBigquery.js`
+`node samples/exportToBigquery.js`
 
 
 -----
