@@ -36,7 +36,7 @@ const bigquery = new BigQuery();
 const bigqueryDataset = generateUuid();
 const bigqueryTable = generateUuid();
 
-describe('ExportInsightsData', () => {
+describe('ExportToBigQuery', () => {
   let projectId;
   let bigqueryProjectId;
 
@@ -63,7 +63,7 @@ describe('ExportInsightsData', () => {
   });
 
   it('should export data to BigQuery', async () => {
-    const stdout = execSync(`node ./exportDataToBigquery.js \
+    const stdout = execSync(`node ./exportToBigquery.js \
                              ${projectId} ${bigqueryProjectId} ${bigqueryDataset} ${bigqueryTable}`);
     assert.match(stdout, new RegExp('Exported data to BigQuery'));
   });

@@ -16,7 +16,7 @@
 'use strict';
 
 function main(projectId, bigqueryProjectId, bigqueryDataset, bigqueryTable) {
-  // [START contactcenterinsights_export_data_to_bigquery]
+  // [START contactcenterinsights_export_to_bigquery]
   /**
    * TODO(developer): Uncomment these variables before running the sample.
    */
@@ -41,6 +41,7 @@ function main(projectId, bigqueryProjectId, bigqueryDataset, bigqueryTable) {
         dataset: bigqueryDataset,
         table: bigqueryTable,
       },
+      filter: 'agent_id="007"',
     });
 
     // Wait for operation to complete.
@@ -48,7 +49,7 @@ function main(projectId, bigqueryProjectId, bigqueryDataset, bigqueryTable) {
     console.info('Exported data to BigQuery');
   }
   exportDataToBigquery();
-  // [END contactcenterinsights_export_data_to_bigquery]
+  // [END contactcenterinsights_export_to_bigquery]
 }
 
 process.on('unhandledRejection', err => {

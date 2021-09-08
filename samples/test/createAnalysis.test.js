@@ -33,8 +33,8 @@ describe('CreateAnalysis', () => {
     projectId = await client.getProjectId();
   });
 
-  after(async () => {
-    await client.deleteConversation({
+  after(() => {
+    client.deleteConversation({
       name: conversationName,
       force: true,
     });
