@@ -25,7 +25,7 @@ const {
 } = require('@google-cloud/contact-center-insights');
 const client = new ContactCenterInsightsClient();
 
-describe.only('SetProjectTtl', () => {
+describe('SetProjectTtl', () => {
   let projectId;
 
   before(async () => {
