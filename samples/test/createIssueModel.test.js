@@ -66,7 +66,7 @@ describe('CreateIssueModel', () => {
     }
   });
 
-  after(() => {
+  after(async () => {
     if (conversationCount >= minConversationCount) {
       client.deleteIssueModel({
         name: issueModelName,
