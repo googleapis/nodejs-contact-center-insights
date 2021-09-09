@@ -25,7 +25,7 @@ const {
 } = require('@google-cloud/contact-center-insights');
 const client = new ContactCenterInsightsClient();
 
-describe('CreatePhraseMatcherAllOf', () => {  // test
+describe('CreatePhraseMatcherAllOf', () => {
   let projectId;
   let phraseMatcherName;
 
