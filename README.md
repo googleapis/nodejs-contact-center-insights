@@ -89,6 +89,7 @@ Samples are in the [`samples/`](https://github.com/googleapis/nodejs-contact-cen
 | Sample                      | Source Code                       | Try it |
 | --------------------------- | --------------------------------- | ------ |
 | Quickstart | [source code](https://github.com/googleapis/nodejs-contact-center-insights/blob/main/samples/quickstart.js) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/nodejs-contact-center-insights&page=editor&open_in_editor=samples/quickstart.js,samples/README.md) |
+| Set Project Ttl | [source code](https://github.com/googleapis/nodejs-contact-center-insights/blob/main/samples/setProjectTtl.js) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/nodejs-contact-center-insights&page=editor&open_in_editor=samples/setProjectTtl.js,samples/README.md) |
 
 
 
