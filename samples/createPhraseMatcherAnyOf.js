@@ -61,7 +61,7 @@ function main(projectId) {
     console.info(`Created ${phraseMatcher.name}`);
   }
   createPhraseMatcherAnyOf();
-  // [END contactcenterinsights_create_phrase_matcher_any_of] test
+  // [END contactcenterinsights_create_phrase_matcher_any_of]
 }
 
 process.on('unhandledRejection', err => {
