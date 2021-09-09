@@ -34,7 +34,7 @@ function main(operationName) {
     const [operation] = await client.operationsClient.getOperation({
       name: operationName,
     });
-    console.info(`Got operation ${operationName}.`);
+    console.info(`Got operation ${operation.name}.`);
   }
   getOperation();
   // [END contactcenterinsights_get_operation]
