@@ -12,6 +12,8 @@
 
 * [Before you begin](#before-you-begin)
 * [Samples](#samples)
+  * [Create Phrase Matcher All Of](#create-phrase-matcher-all-of)
+  * [Create Phrase Matcher Any Of](#create-phrase-matcher-any-of)
   * [Quickstart](#quickstart)
 
 ## Before you begin
@@ -26,6 +28,40 @@ Before running the samples, make sure you've followed the steps outlined in
 `cd ..`
 
 ## Samples
+
+
+
+### Create Phrase Matcher All Of
+
+View the [source code](https://github.com/googleapis/nodejs-contact-center-insights/blob/main/samples/createPhraseMatcherAllOf.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/nodejs-contact-center-insights&page=editor&open_in_editor=samples/createPhraseMatcherAllOf.js,samples/README.md)
+
+__Usage:__
+
+
+`node samples/createPhraseMatcherAllOf.js`
+
+
+-----
+
+
+
+
+### Create Phrase Matcher Any Of
+
+View the [source code](https://github.com/googleapis/nodejs-contact-center-insights/blob/main/samples/createPhraseMatcherAnyOf.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/nodejs-contact-center-insights&page=editor&open_in_editor=samples/createPhraseMatcherAnyOf.js,samples/README.md)
+
+__Usage:__
+
+
+`node samples/createPhraseMatcherAnyOf.js`
+
+
+-----
+
 
 
 
