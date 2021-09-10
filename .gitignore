@@ -3,7 +3,7 @@
 .coverage
 coverage
 .idea/
-.nyc_output/
+.nyc_output
 docs/
 out/
 build/
