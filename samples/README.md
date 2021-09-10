@@ -16,6 +16,7 @@
   * [Create Conversation](#create-conversation)
   * [Create Conversation With Ttl](#create-conversation-with-ttl)
   * [Export To Bigquery](#export-to-bigquery)
+  * [Get Operation](#get-operation)
   * [Quickstart](#quickstart)
 
 ## Before you begin
@@ -94,6 +95,21 @@ __Usage:__
 
 
 `node samples/exportToBigquery.js`
+
+
+-----
+
+
+
+
+### Get Operation
+
+View the [source code](https://github.com/googleapis/nodejs-contact-center-insights/blob/main/samples/getOperation.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/nodejs-contact-center-insights&page=editor&open_in_editor=samples/getOperation.js,samples/README.md)
+
+
+`node samples/getOperation.js`
 
 
 -----
