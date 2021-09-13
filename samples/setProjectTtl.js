@@ -42,7 +42,7 @@ function main(projectId) {
         paths: ['conversation_ttl'],
       },
     });
-    console.info('Set TTL for all incoming conversations to 60 seconds.');
+    console.info('Set TTL for all incoming conversations to 60 seconds');
   }
   setProjectTtl();
   // [END contactcenterinsights_set_project_ttl]
