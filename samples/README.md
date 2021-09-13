@@ -87,17 +87,12 @@ __Usage:__
 
 
 
+
 ### Create Phrase Matcher All Of
 
 View the [source code](https://github.com/googleapis/nodejs-contact-center-insights/blob/main/samples/createPhraseMatcherAllOf.js).
 
 [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/nodejs-contact-center-insights&page=editor&open_in_editor=samples/createPhraseMatcherAllOf.js,samples/README.md)
-=======
-### Enable Pub Sub Notifications
-
-View the [source code](https://github.com/googleapis/nodejs-contact-center-insights/blob/main/samples/enablePubSubNotifications.js).
-
-[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/nodejs-contact-center-insights&page=editor&open_in_editor=samples/enablePubSubNotifications.js,samples/README.md)
 
 __Usage:__
 
@@ -120,7 +115,22 @@ __Usage:__
 
 
 `node samples/createPhraseMatcherAnyOf.js`
-=======
+
+
+-----
+
+
+
+
+### Enable Pub Sub Notifications
+
+View the [source code](https://github.com/googleapis/nodejs-contact-center-insights/blob/main/samples/enablePubSubNotifications.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/nodejs-contact-center-insights&page=editor&open_in_editor=samples/enablePubSubNotifications.js,samples/README.md)
+
+__Usage:__
+
+
 `node samples/enablePubSubNotifications.js`
 
 
