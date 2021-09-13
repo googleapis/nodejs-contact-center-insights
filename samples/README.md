@@ -17,6 +17,7 @@
   * [Create Conversation With Ttl](#create-conversation-with-ttl)
   * [Create Phrase Matcher All Of](#create-phrase-matcher-all-of)
   * [Create Phrase Matcher Any Of](#create-phrase-matcher-any-of)
+  * [Enable Pub Sub Notifications](#enable-pub-sub-notifications)
   * [Export To Bigquery](#export-to-bigquery)
   * [Get Operation](#get-operation)
   * [Quickstart](#quickstart)
@@ -86,12 +87,17 @@ __Usage:__
 
 
 
-
 ### Create Phrase Matcher All Of
 
 View the [source code](https://github.com/googleapis/nodejs-contact-center-insights/blob/main/samples/createPhraseMatcherAllOf.js).
 
 [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/nodejs-contact-center-insights&page=editor&open_in_editor=samples/createPhraseMatcherAllOf.js,samples/README.md)
+=======
+### Enable Pub Sub Notifications
+
+View the [source code](https://github.com/googleapis/nodejs-contact-center-insights/blob/main/samples/enablePubSubNotifications.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/nodejs-contact-center-insights&page=editor&open_in_editor=samples/enablePubSubNotifications.js,samples/README.md)
 
 __Usage:__
 
@@ -114,6 +120,8 @@ __Usage:__
 
 
 `node samples/createPhraseMatcherAnyOf.js`
+=======
+`node samples/enablePubSubNotifications.js`
 
 
 -----
