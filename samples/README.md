@@ -99,7 +99,6 @@ __Usage:__
 `node samples/createIssueModel.js`
 
 
-
 -----
 
 
