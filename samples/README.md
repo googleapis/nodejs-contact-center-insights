@@ -15,10 +15,11 @@
   * [Create Analysis](#create-analysis)
   * [Create Conversation](#create-conversation)
   * [Create Conversation With Ttl](#create-conversation-with-ttl)
+  * [Create Phrase Matcher All Of](#create-phrase-matcher-all-of)
+  * [Create Phrase Matcher Any Of](#create-phrase-matcher-any-of)
   * [Export To Bigquery](#export-to-bigquery)
   * [Get Operation](#get-operation)
   * [Quickstart](#quickstart)
-  * [Set Project Ttl](#set-project-ttl)
 
 ## Before you begin
 
@@ -86,6 +87,40 @@ __Usage:__
 
 
 
+### Create Phrase Matcher All Of
+
+View the [source code](https://github.com/googleapis/nodejs-contact-center-insights/blob/main/samples/createPhraseMatcherAllOf.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/nodejs-contact-center-insights&page=editor&open_in_editor=samples/createPhraseMatcherAllOf.js,samples/README.md)
+
+__Usage:__
+
+
+`node samples/createPhraseMatcherAllOf.js`
+
+
+-----
+
+
+
+
+### Create Phrase Matcher Any Of
+
+View the [source code](https://github.com/googleapis/nodejs-contact-center-insights/blob/main/samples/createPhraseMatcherAnyOf.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/nodejs-contact-center-insights&page=editor&open_in_editor=samples/createPhraseMatcherAnyOf.js,samples/README.md)
+
+__Usage:__
+
+
+`node samples/createPhraseMatcherAnyOf.js`
+
+
+-----
+
+
+
+
 ### Export To Bigquery
 
 View the [source code](https://github.com/googleapis/nodejs-contact-center-insights/blob/main/samples/exportToBigquery.js).
@@ -130,23 +165,6 @@ __Usage:__
 
 
 `node samples/quickstart.js`
-
-
------
-
-
-
-
-### Set Project Ttl
-
-View the [source code](https://github.com/googleapis/nodejs-contact-center-insights/blob/main/samples/setProjectTtl.js).
-
-[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/nodejs-contact-center-insights&page=editor&open_in_editor=samples/setProjectTtl.js,samples/README.md)
-
-__Usage:__
-
-
-`node samples/setProjectTtl.js`
 
 
 
