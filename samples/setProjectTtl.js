@@ -35,14 +35,14 @@ function main(projectId) {
       settings: {
         name: client.settingsPath(projectId, 'us-central1'),
         conversationTtl: {
-          seconds: 60,
+          seconds: 86400,
         },
       },
       updateMask: {
         paths: ['conversation_ttl'],
       },
     });
-    console.info('Set TTL for all incoming conversations to 60 seconds');
+    console.info('Set TTL for all incoming conversations to 24 hours');
   }
   setProjectTtl();
   // [END contactcenterinsights_set_project_ttl]
