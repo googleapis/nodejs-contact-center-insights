@@ -36,7 +36,7 @@ function main(projectId) {
       issueModel: {
         displayName: 'my-model',
         inputDataConfig: {
-          medium: 'CHAT',
+          filter: 'medium="CHAT"',
         },
       },
     });
