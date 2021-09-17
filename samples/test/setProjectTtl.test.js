@@ -49,7 +49,7 @@ describe('SetProjectTtl', () => {
     const stdout = execSync(`node ./setProjectTtl.js ${projectId}`);
     assert.match(
       stdout,
-      new RegExp('Set TTL for all incoming conversations to 24 hours')
+      new RegExp('Set TTL for all incoming conversations to 86400 seconds')
     );
   });
 });
