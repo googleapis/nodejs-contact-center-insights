@@ -15,6 +15,7 @@
   * [Create Analysis](#create-analysis)
   * [Create Conversation](#create-conversation)
   * [Create Conversation With Ttl](#create-conversation-with-ttl)
+  * [Create Issue Model](#create-issue-model)
   * [Create Phrase Matcher All Of](#create-phrase-matcher-all-of)
   * [Create Phrase Matcher Any Of](#create-phrase-matcher-any-of)
   * [Enable Pub Sub Notifications](#enable-pub-sub-notifications)
@@ -81,6 +82,23 @@ __Usage:__
 
 
 `node samples/createConversationWithTtl.js`
+
+
+-----
+
+
+
+
+### Create Issue Model
+
+View the [source code](https://github.com/googleapis/nodejs-contact-center-insights/blob/main/samples/createIssueModel.js).
+
+[![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/nodejs-contact-center-insights&page=editor&open_in_editor=samples/createIssueModel.js,samples/README.md)
+
+__Usage:__
+
+
+`node samples/createIssueModel.js`
 
 
 -----
