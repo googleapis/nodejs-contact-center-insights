@@ -12,39 +12,44 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 'use strict';
 
-function main(name) {
-  // [START contactcenterinsights_v1_generated_ContactCenterInsights_DeleteIssueModel_async]
+function main(phraseMatcher) {
+  // [START contactcenterinsights_v1_generated_ContactCenterInsights_UpdatePhraseMatcher_async]
   /**
    * TODO(developer): Uncomment these variables before running the sample.
    */
   /**
-   *  Required. The name of the issue model to delete.
+   *  Required. The new values for the phrase matcher.
    */
-  // const name = 'abc123'
+  // const phraseMatcher = ''
+  /**
+   *  The list of fields to be updated.
+   */
+  // const updateMask = ''
 
   // Imports the Contactcenterinsights library
-  const {ContactCenterInsightsClient} = require('@google-cloud/contact-center-insights').v1;
+  const {ContactCenterInsightsClient} =
+    require('@google-cloud/contact-center-insights').v1;
 
   // Instantiates a client
   const contactcenterinsightsClient = new ContactCenterInsightsClient();
 
-  async function deleteIssueModel() {
+  async function updatePhraseMatcher() {
     // Construct request
     const request = {
-      name,
+      phraseMatcher,
     };
 
     // Run request
-    const [operation] = await contactcenterinsightsClient.deleteIssueModel(request);
-    const [response] = await operation.promise();
+    const response = await contactcenterinsightsClient.updatePhraseMatcher(
+      request
+    );
     console.log(response);
   }
 
-  deleteIssueModel();
-  // [END contactcenterinsights_v1_generated_ContactCenterInsights_DeleteIssueModel_async]
+  updatePhraseMatcher();
+  // [END contactcenterinsights_v1_generated_ContactCenterInsights_UpdatePhraseMatcher_async]
 }
 
 process.on('unhandledRejection', err => {
