@@ -22242,6 +22242,7 @@
                              * @memberof google.cloud.contactcenterinsights.v1.Settings
                              * @interface IAnalysisConfig
                              * @property {number|null} [runtimeIntegrationAnalysisPercentage] AnalysisConfig runtimeIntegrationAnalysisPercentage
+                             * @property {boolean|null} [disableIssueModeling] AnalysisConfig disableIssueModeling
                              */
     
                             /**
@@ -22266,6 +22267,14 @@
                              * @instance
                              */
                             AnalysisConfig.prototype.runtimeIntegrationAnalysisPercentage = 0;
+    
+                            /**
+                             * AnalysisConfig disableIssueModeling.
+                             * @member {boolean} disableIssueModeling
+                             * @memberof google.cloud.contactcenterinsights.v1.Settings.AnalysisConfig
+                             * @instance
+                             */
+                            AnalysisConfig.prototype.disableIssueModeling = false;
     
                             /**
                              * Creates a new AnalysisConfig instance using the specified properties.
@@ -22293,6 +22302,8 @@
                                     writer = $Writer.create();
                                 if (message.runtimeIntegrationAnalysisPercentage != null && Object.hasOwnProperty.call(message, "runtimeIntegrationAnalysisPercentage"))
                                     writer.uint32(/* id 1, wireType 1 =*/9).double(message.runtimeIntegrationAnalysisPercentage);
+                                if (message.disableIssueModeling != null && Object.hasOwnProperty.call(message, "disableIssueModeling"))
+                                    writer.uint32(/* id 3, wireType 0 =*/24).bool(message.disableIssueModeling);
                                 return writer;
                             };
     
@@ -22329,6 +22340,9 @@
                                     switch (tag >>> 3) {
                                     case 1:
                                         message.runtimeIntegrationAnalysisPercentage = reader.double();
+                                        break;
+                                    case 3:
+                                        message.disableIssueModeling = reader.bool();
                                         break;
                                     default:
                                         reader.skipType(tag & 7);
@@ -22368,6 +22382,9 @@
                                 if (message.runtimeIntegrationAnalysisPercentage != null && message.hasOwnProperty("runtimeIntegrationAnalysisPercentage"))
                                     if (typeof message.runtimeIntegrationAnalysisPercentage !== "number")
                                         return "runtimeIntegrationAnalysisPercentage: number expected";
+                                if (message.disableIssueModeling != null && message.hasOwnProperty("disableIssueModeling"))
+                                    if (typeof message.disableIssueModeling !== "boolean")
+                                        return "disableIssueModeling: boolean expected";
                                 return null;
                             };
     
@@ -22385,6 +22402,8 @@
                                 var message = new $root.google.cloud.contactcenterinsights.v1.Settings.AnalysisConfig();
                                 if (object.runtimeIntegrationAnalysisPercentage != null)
                                     message.runtimeIntegrationAnalysisPercentage = Number(object.runtimeIntegrationAnalysisPercentage);
+                                if (object.disableIssueModeling != null)
+                                    message.disableIssueModeling = Boolean(object.disableIssueModeling);
                                 return message;
                             };
     
@@ -22401,10 +22420,14 @@
                                 if (!options)
                                     options = {};
                                 var object = {};
-                                if (options.defaults)
+                                if (options.defaults) {
                                     object.runtimeIntegrationAnalysisPercentage = 0;
+                                    object.disableIssueModeling = false;
+                                }
                                 if (message.runtimeIntegrationAnalysisPercentage != null && message.hasOwnProperty("runtimeIntegrationAnalysisPercentage"))
                                     object.runtimeIntegrationAnalysisPercentage = options.json && !isFinite(message.runtimeIntegrationAnalysisPercentage) ? String(message.runtimeIntegrationAnalysisPercentage) : message.runtimeIntegrationAnalysisPercentage;
+                                if (message.disableIssueModeling != null && message.hasOwnProperty("disableIssueModeling"))
+                                    object.disableIssueModeling = message.disableIssueModeling;
                                 return object;
                             };
     

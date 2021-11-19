@@ -2375,6 +2375,10 @@
                             "runtimeIntegrationAnalysisPercentage": {
                               "type": "double",
                               "id": 1
+                            },
+                            "disableIssueModeling": {
+                              "type": "bool",
+                              "id": 3
                             }
                           }
                         }

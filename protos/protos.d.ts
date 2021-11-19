@@ -9401,6 +9401,9 @@ export namespace google {
 
                         /** AnalysisConfig runtimeIntegrationAnalysisPercentage */
                         runtimeIntegrationAnalysisPercentage?: (number|null);
+
+                        /** AnalysisConfig disableIssueModeling */
+                        disableIssueModeling?: (boolean|null);
                     }
 
                     /** Represents an AnalysisConfig. */
@@ -9414,6 +9417,9 @@ export namespace google {
 
                         /** AnalysisConfig runtimeIntegrationAnalysisPercentage. */
                         public runtimeIntegrationAnalysisPercentage: number;
+
+                        /** AnalysisConfig disableIssueModeling. */
+                        public disableIssueModeling: boolean;
 
                         /**
                          * Creates a new AnalysisConfig instance using the specified properties.
