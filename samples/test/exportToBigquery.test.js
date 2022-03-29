@@ -31,6 +31,7 @@ const {
 const client = new ContactCenterInsightsClient();
 
 const {BigQuery} = require('@google-cloud/bigquery');
+const { utimes } = require('fs');
 const bigquery = new BigQuery();
 
 const bigqueryDataset = generateUuid();
@@ -62,7 +63,8 @@ describe('ExportToBigQuery', () => {
       .catch(console.warn);
   });
 
-  it('should export data to BigQuery', async () => {
+  it('should export data to BigQuery', async function () {
+    this.retries(2);
     const stdout = execSync(`node ./exportToBigquery.js \
                              ${projectId} ${bigqueryProjectId} ${bigqueryDataset} ${bigqueryTable}`);
     assert.match(stdout, new RegExp('Exported data to BigQuery'));
