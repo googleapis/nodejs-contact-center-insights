@@ -31,7 +31,7 @@ const {
 const client = new ContactCenterInsightsClient();
 
 const {BigQuery} = require('@google-cloud/bigquery');
-const { utimes } = require('fs');
+const {utimes} = require('fs');
 const bigquery = new BigQuery();
 
 const bigqueryDataset = generateUuid();
