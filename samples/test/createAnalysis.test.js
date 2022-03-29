@@ -22,6 +22,7 @@ const execSync = cmd => cp.execSync(cmd, {encoding: 'utf-8'});
 
 const {
   ContactCenterInsightsClient,
+  // eslint-disable-next-line node/no-missing-require
 } = require('@google-cloud/contact-center-insights');
 const client = new ContactCenterInsightsClient();
 
@@ -40,7 +41,8 @@ describe('CreateAnalysis', () => {
     });
   });
 
-  it('should create a conversation and an analysis', async () => {
+  // eslint-disable-next-line prefer-arrow-callback
+  it('should create a conversation and an analysis', async function () {
     const stdoutCreateConversation = execSync(
       `node ./createConversation.js ${projectId}`
     );
