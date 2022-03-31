@@ -26,6 +26,22 @@ const {
 } = require('@google-cloud/contact-center-insights');
 const client = new ContactCenterInsightsClient();
 
+const delay = async (test, addMs) => {
+  if (!test) {
+    return;
+  }
+  const retries = test.currentRetry();
+  await new Promise(r => setTimeout(r, addMs));
+  // No retry on the first failure.
+  if (retries === 0) return;
+  // See: https://cloud.google.com/storage/docs/exponential-backoff
+  const ms = Math.pow(2, retries) + Math.random() * 1000;
+  return new Promise(done => {
+    console.info(`retrying "${test.title}" in ${ms}ms`);
+    setTimeout(done, ms);
+  });
+};
+
 describe('CreateAnalysis', () => {
   let projectId;
   let conversationName;
@@ -43,6 +59,8 @@ describe('CreateAnalysis', () => {
 
   // eslint-disable-next-line prefer-arrow-callback
   it('should create a conversation and an analysis', async function () {
+    this.retries(2);
+    await delay(this.test, 4000);
     const stdoutCreateConversation = execSync(
       `node ./createConversation.js ${projectId}`
     );
