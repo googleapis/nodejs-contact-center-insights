@@ -30,7 +30,6 @@ import {
 } from 'google-gax';
 
 import {Transform} from 'stream';
-import {RequestType} from 'google-gax/build/src/apitypes';
 import * as protos from '../../protos/protos';
 import jsonProtos = require('../../protos/protos.json');
 /**
@@ -425,7 +424,8 @@ export class ContactCenterInsightsClient {
       const apiCall = this._gaxModule.createApiCall(
         callPromise,
         this._defaults[methodName],
-        descriptor
+        descriptor,
+        this._opts.fallback
       );
 
       this.innerApiCalls[methodName] = apiCall;
@@ -2981,7 +2981,7 @@ export class ContactCenterInsightsClient {
     const decodeOperation = new gax.Operation(
       operation,
       this.descriptors.longrunning.createAnalysis,
-      gax.createDefaultBackoffSettings()
+      this._gaxModule.createDefaultBackoffSettings()
     );
     return decodeOperation as LROperation<
       protos.google.cloud.contactcenterinsights.v1.Analysis,
@@ -3129,7 +3129,7 @@ export class ContactCenterInsightsClient {
     const decodeOperation = new gax.Operation(
       operation,
       this.descriptors.longrunning.exportInsightsData,
-      gax.createDefaultBackoffSettings()
+      this._gaxModule.createDefaultBackoffSettings()
     );
     return decodeOperation as LROperation<
       protos.google.cloud.contactcenterinsights.v1.ExportInsightsDataResponse,
@@ -3268,7 +3268,7 @@ export class ContactCenterInsightsClient {
     const decodeOperation = new gax.Operation(
       operation,
       this.descriptors.longrunning.createIssueModel,
-      gax.createDefaultBackoffSettings()
+      this._gaxModule.createDefaultBackoffSettings()
     );
     return decodeOperation as LROperation<
       protos.google.cloud.contactcenterinsights.v1.IssueModel,
@@ -3405,7 +3405,7 @@ export class ContactCenterInsightsClient {
     const decodeOperation = new gax.Operation(
       operation,
       this.descriptors.longrunning.deleteIssueModel,
-      gax.createDefaultBackoffSettings()
+      this._gaxModule.createDefaultBackoffSettings()
     );
     return decodeOperation as LROperation<
       protos.google.protobuf.Empty,
@@ -3543,7 +3543,7 @@ export class ContactCenterInsightsClient {
     const decodeOperation = new gax.Operation(
       operation,
       this.descriptors.longrunning.deployIssueModel,
-      gax.createDefaultBackoffSettings()
+      this._gaxModule.createDefaultBackoffSettings()
     );
     return decodeOperation as LROperation<
       protos.google.cloud.contactcenterinsights.v1.DeployIssueModelResponse,
@@ -3681,7 +3681,7 @@ export class ContactCenterInsightsClient {
     const decodeOperation = new gax.Operation(
       operation,
       this.descriptors.longrunning.undeployIssueModel,
-      gax.createDefaultBackoffSettings()
+      this._gaxModule.createDefaultBackoffSettings()
     );
     return decodeOperation as LROperation<
       protos.google.cloud.contactcenterinsights.v1.UndeployIssueModelResponse,
@@ -3845,7 +3845,7 @@ export class ContactCenterInsightsClient {
     const callSettings = defaultCallSettings.merge(options);
     this.initialize();
     return this.descriptors.page.listConversations.createStream(
-      this.innerApiCalls.listConversations as gax.GaxCall,
+      this.innerApiCalls.listConversations as GaxCall,
       request,
       callSettings
     );
@@ -3903,7 +3903,7 @@ export class ContactCenterInsightsClient {
     this.initialize();
     return this.descriptors.page.listConversations.asyncIterate(
       this.innerApiCalls['listConversations'] as GaxCall,
-      request as unknown as RequestType,
+      request as {},
       callSettings
     ) as AsyncIterable<protos.google.cloud.contactcenterinsights.v1.IConversation>;
   }
@@ -4060,7 +4060,7 @@ export class ContactCenterInsightsClient {
     const callSettings = defaultCallSettings.merge(options);
     this.initialize();
     return this.descriptors.page.listAnalyses.createStream(
-      this.innerApiCalls.listAnalyses as gax.GaxCall,
+      this.innerApiCalls.listAnalyses as GaxCall,
       request,
       callSettings
     );
@@ -4116,7 +4116,7 @@ export class ContactCenterInsightsClient {
     this.initialize();
     return this.descriptors.page.listAnalyses.asyncIterate(
       this.innerApiCalls['listAnalyses'] as GaxCall,
-      request as unknown as RequestType,
+      request as {},
       callSettings
     ) as AsyncIterable<protos.google.cloud.contactcenterinsights.v1.IAnalysis>;
   }
@@ -4273,7 +4273,7 @@ export class ContactCenterInsightsClient {
     const callSettings = defaultCallSettings.merge(options);
     this.initialize();
     return this.descriptors.page.listPhraseMatchers.createStream(
-      this.innerApiCalls.listPhraseMatchers as gax.GaxCall,
+      this.innerApiCalls.listPhraseMatchers as GaxCall,
       request,
       callSettings
     );
@@ -4329,7 +4329,7 @@ export class ContactCenterInsightsClient {
     this.initialize();
     return this.descriptors.page.listPhraseMatchers.asyncIterate(
       this.innerApiCalls['listPhraseMatchers'] as GaxCall,
-      request as unknown as RequestType,
+      request as {},
       callSettings
     ) as AsyncIterable<protos.google.cloud.contactcenterinsights.v1.IPhraseMatcher>;
   }
@@ -4480,7 +4480,7 @@ export class ContactCenterInsightsClient {
     const callSettings = defaultCallSettings.merge(options);
     this.initialize();
     return this.descriptors.page.listViews.createStream(
-      this.innerApiCalls.listViews as gax.GaxCall,
+      this.innerApiCalls.listViews as GaxCall,
       request,
       callSettings
     );
@@ -4533,7 +4533,7 @@ export class ContactCenterInsightsClient {
     this.initialize();
     return this.descriptors.page.listViews.asyncIterate(
       this.innerApiCalls['listViews'] as GaxCall,
-      request as unknown as RequestType,
+      request as {},
       callSettings
     ) as AsyncIterable<protos.google.cloud.contactcenterinsights.v1.IView>;
   }
